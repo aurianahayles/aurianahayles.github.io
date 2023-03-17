@@ -4,6 +4,7 @@
  Student ID: 100832275
  Date: March, 14th, 2023
  **/
+/////////////////////////////////////////////////////////////////////////////////////////
 (function()
 {
     function AuthGuard(): void
@@ -24,7 +25,7 @@
             }
         }
     }
-    
+  /////////////////////////////////////////////////////////////////////////////////////////
     function LoadLink(link: string, data: string = ""): void
     {
         router.ActiveLink = link;
@@ -495,6 +496,7 @@
 
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////
     /**
      * This function adds a new Task to the TaskList
      */
@@ -527,7 +529,7 @@
          messageArea.show().addClass("alert alert-danger").text("Please enter a valid Task.");
        }
      }
- 
+    /////////////////////////////////////////////////////////////////////////////////////////
      /**
       * This function is the Callback function for the TaskList
       *
@@ -587,7 +589,7 @@
              }    
          });
      }
-
+    /////////////////////////////////////////////////////////////////////////////////////////
     /**
      * This method returns the appropriate function callback relative to the Active Link
      *
@@ -607,8 +609,10 @@
             case "login": return DisplayLoginPage;
             case "register": return DisplayRegisterPage;
             case "404": return Display404Page;
-            case "task-list": return DisplayTaskList; //Added callback function for theDisplayTaskList
 
+            /////////////////////////////////////////////////////////////////////////////////////////
+            case "task-list": return DisplayTaskList; //Added callback function for theDisplayTaskList
+            /////////////////////////////////////////////////////////////////////////////////////////
             default:
                 console.error("ERROR: callback does not exist: " + router.ActiveLink);
                 return new Function();
